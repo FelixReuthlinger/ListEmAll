@@ -1,8 +1,6 @@
 ﻿using BepInEx;
-using CreatureLister;
 using Jotunn.Entities;
 using Jotunn.Managers;
-using Jotunn.Utils;
 
 namespace ListEmAll
 {
@@ -18,16 +16,16 @@ namespace ListEmAll
 
         private void Awake()
         {
-            CommandManager.Instance.AddConsoleCommand(new CreatureListerController());
+            CommandManager.Instance.AddConsoleCommand(new AllPrefabsListerController());
         }
     }
     
-    public class CreatureListerController : ConsoleCommand {
+    public class AllPrefabsListerController : ConsoleCommand {
         public override void Run(string[] args) {
-            HumanoidLister.WriteData();
+            PrefabLister.WriteData();
         }
 
-        public override string Name => "creature_lister_generate_defaults_file";
+        public override string Name => "prefabs_lister_generate_defaults_file";
 
         public override string Help =>
             "Write all character based default information to a YAML file inside the BepInEx config folder.";
