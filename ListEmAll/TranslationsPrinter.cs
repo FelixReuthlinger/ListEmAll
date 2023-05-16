@@ -5,8 +5,6 @@ using JetBrains.Annotations;
 using Jotunn;
 using Jotunn.Managers;
 using Jotunn.Utils;
-using YamlDotNet.Serialization;
-using YamlDotNet.Serialization.NamingConventions;
 using Paths = BepInEx.Paths;
 
 namespace ListEmAll
