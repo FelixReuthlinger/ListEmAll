@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using Jotunn;
 using Jotunn.Entities;
 using Jotunn.Managers;
 
@@ -23,6 +24,7 @@ namespace ListEmAll
     {
         public override void Run(string[] args)
         {
+            Logger.LogInfo($"PrefabsTranslationsPrinterController called with args '{string.Join(" - ", args)}'");
             if (args.Length > 0)
             {
                 TranslationsPrinter.WriteData(args[0]);
